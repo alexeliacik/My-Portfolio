@@ -12,7 +12,7 @@ import ContactMe from "./ContactMe/ContactMe";
 const StyledMainContent = styled.main`
   position: relative;
   min-height: 100vh;
-  width: 75%;
+  width: 77%;
   transform: ${({ showNavbar }) =>
     showNavbar ? "translateX(270px)" : "translateX(0)"};
   transition: all 0.5s;
