@@ -79,7 +79,7 @@ const Card = styled.a`
   }
 
   @media (max-width: 768px) {
-    width: calc(91vw);
+    width: calc(90vw);
     height: calc(79vw);
   }
 `;

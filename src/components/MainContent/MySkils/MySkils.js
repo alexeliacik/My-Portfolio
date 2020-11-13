@@ -14,6 +14,10 @@ const StyledMySkills = styled.div`
     font-family: "Rambla", sans-serif;
     margin-bottom: 30px;
 
+    @media (max-width: 768px) {
+      flex-direction: column;
+    }
+
     .skillCard {
       flex: 0 0 30%;
       display: flex;
@@ -48,6 +52,11 @@ const StyledMySkills = styled.div`
         color: #888;
         margin: 0 20px;
       }
+    }
+
+    @media (max-width: 768px) {
+      width: calc(91vw);
+      height: calc(79vw);
     }
   }
 `;
