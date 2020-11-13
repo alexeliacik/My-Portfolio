@@ -77,6 +77,11 @@ const Card = styled.a`
     width: calc(28vw);
     height: calc(25vw);
   }
+
+  @media (max-width: 768px) {
+    width: calc(91vw);
+    height: calc(79vw);
+  }
 `;
 
 const MyWebsites = () => {

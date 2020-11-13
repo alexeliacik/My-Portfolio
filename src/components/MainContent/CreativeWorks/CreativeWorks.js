@@ -41,6 +41,11 @@ const PortfolioCard = styled.a`
   height: calc(19vw);
   padding: 20px;
 
+  @media (max-width: 768px) {
+    width: calc(91vw) !important;
+    height: calc(79vw) !important;
+  }
+
   background-image: ${(props) =>
     `linear-gradient(transparent, transparent), url(${process.env.PUBLIC_URL}/DynamicPortfolioImages/${props.backgroundImage}.jpg)`};
   background-size: cover;
