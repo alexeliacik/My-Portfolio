@@ -20,6 +20,9 @@ const IframeCard = styled.a`
   @media (max-width: 1024px) {
     width: calc(28vw);
   }
+  @media (max-width: 768px) {
+    width: calc(91vw);
+  }
 `;
 
 const MySongs = () => {
