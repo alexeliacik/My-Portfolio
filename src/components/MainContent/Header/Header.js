@@ -36,6 +36,7 @@ const StyledHeader = styled.header`
     display: flex;
     flex-direction: column;
     align-items: center;
+    min-width: 50%;
     color: #fff;
 
     .image_wrap {

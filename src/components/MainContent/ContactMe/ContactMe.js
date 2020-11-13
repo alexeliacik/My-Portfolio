@@ -1,5 +1,5 @@
-import React from "react";
-import styled from "styled-components";
+import React, { useEffect, useState } from "react";
+import styled, { keyframes } from "styled-components";
 import emailjs from "emailjs-com";
 import Container from "../../../StyledComponents/Container";
 import Button from "../../../StyledComponents/Button";
@@ -15,6 +15,8 @@ const ContactFormBox = styled.div`
 `;
 
 const ContactForm = styled.form`
+  position: relative;
+
   & > *:not(button) {
     margin-bottom: 15px;
     background: transparent;
@@ -55,7 +57,34 @@ const Textarea = styled.textarea`
   }
 `;
 
+const animatePopUp = keyframes`
+  from{opacity:0; transform: scale(0.9) translateY(1rem)}
+  to{opacity:1; transform: translateY(0)}
+`;
+
+const PopUp = styled.div`
+  position: absolute;
+  bottom: -6%;
+  right: 22%;
+  background-color: rgba(16, 16, 16, 1);
+  color: #888;
+  padding: 30px;
+  border-radius: 3px;
+  z-index: 60;
+  animation: ${animatePopUp} 0.5s;
+  animation-fill-mode: forwards;
+`;
 const ContactMe = () => {
+  const [showPopUp, setShowPopUp] = useState(true);
+  const [message, setMessage] = useState("");
+
+  useEffect(() => {
+    const timer = setTimeout(() => {
+      setShowPopUp(false);
+    }, 5000);
+
+    return () => clearTimeout(timer);
+  }, [showPopUp]);
   const sendEmail = (e) => {
     e.preventDefault();
 
@@ -68,10 +97,14 @@ const ContactMe = () => {
       )
       .then(
         (result) => {
-          console.log(result.text);
+          if (result.text === "OK") {
+            setMessage("Message has been sent succesfully!");
+            setShowPopUp(true);
+          }
         },
         (error) => {
-          console.log(error.text);
+          setShowPopUp(true);
+          setMessage("Something went Wrong!");
         }
       );
   };
@@ -104,6 +137,7 @@ const ContactMe = () => {
               <Button type="submit" value="Send">
                 Say Hello!
               </Button>
+              <PopUp>{message}</PopUp>
             </ContactForm>
           </Fade>
         </ContactFormBox>

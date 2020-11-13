@@ -22,7 +22,7 @@ const StyledMainContent = styled.main`
   }
 `;
 
-const MainContent = ({ showNavbar, closeMenu }) => {
+const MainContent = ({ showNavbar, closeMenu, shopPopUp }) => {
   const handleScroll = useCallback(() => {
     closeMenu();
   }, [closeMenu]);

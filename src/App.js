@@ -47,6 +47,7 @@ const StyledApp = styled.div`
     transition: all 0.3s;
   }
 `;
+
 const NavbarToggleSpan = styled.span`
   position: relative;
   height: 3px;
@@ -112,6 +113,7 @@ const NavbarToggle = styled.div`
     display: none;
   }
 `;
+
 const App = () => {
   const [showNavbar, setShowNavbar] = useState(false);
 
@@ -138,7 +140,6 @@ const App = () => {
           <NavbarToggleSpan></NavbarToggleSpan>
         </NavbarToggle>
       </CSSTransition>
-
       <Navbar
         showNavbar={showNavbar}
         toggleMenu={toggleMenu}
