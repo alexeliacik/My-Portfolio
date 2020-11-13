@@ -15,9 +15,9 @@ const FooterCard = styled.div`
   align-items: center;
   justify-content: center;
   width: 33.33%;
-  height: 300px;
+  height: 400px;
   text-align: center;
-  font-size: 16px;
+  font-size: 18px;
 `;
 
 const Footer = () => {

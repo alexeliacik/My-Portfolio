@@ -1,6 +1,6 @@
 import React from "react";
 import styled, { keyframes } from "styled-components";
-import Typical from "react-typical";
+import Typed from "react-typed";
 import { FaAngleDoubleDown } from "react-icons/fa";
 import { Link } from "react-scroll";
 import headerBackgroundImage from "../../../assets/images/slider.jpg";
@@ -92,11 +92,12 @@ const Header = () => {
         <h1>ALEX ELIACIK</h1>
         <h2 className="cd-headline clip">
           <span>I'm </span>
-          <Typical
-            style={{ display: "inline" }}
-            steps={["Front-End Developer", 1300, "UX/UI Developer", 1300]}
-            loop={Infinity}
-            wrapper="span"
+
+          <Typed
+            strings={["Front-End Developer", "UX/UI Developer"]}
+            backSpeed={30}
+            typeSpeed={30}
+            loop
           />
         </h2>
       </div>

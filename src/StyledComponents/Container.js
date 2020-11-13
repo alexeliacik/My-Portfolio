@@ -1,7 +1,7 @@
 import styled from "styled-components";
 
 const Container = styled.div`
-  padding: 100px 30px;
+  padding: 80px 30px;
   padding-bottom: ${({ paddingBottom }) => paddingBottom && paddingBottom};
   background-color: ${({ background }) => background};
 
