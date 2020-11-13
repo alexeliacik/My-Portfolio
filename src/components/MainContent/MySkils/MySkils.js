@@ -57,7 +57,7 @@ const StyledMySkills = styled.div`
 
     @media (max-width: 768px) {
       width: calc(91vw);
-      min-height: calc(79vw);
+      height: calc(79vw);
     }
   }
 `;
