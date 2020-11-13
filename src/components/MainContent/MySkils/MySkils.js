@@ -41,6 +41,7 @@ const StyledMySkills = styled.div`
       .skillCardHeader {
         font-weight: 700;
         margin-bottom: 10px;
+
         color: #101010;
         font-size: 18px;
       }
