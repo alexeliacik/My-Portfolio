@@ -29,7 +29,7 @@ const StyledMySkills = styled.div`
       padding: 30px;
 
       .skillCardIcon {
-        margin-bottom: 10px;
+        margin-bottom: 35px;
 
         svg {
           opacity: 0.6;
@@ -79,8 +79,8 @@ const MySkills = () => {
               </div>
               <h3 className="skillCardHeader">Web Technologies</h3>
               <p className="skillCardText">
-                HTML5, CSS3 (Flexbox, Grid CSS) React JS (Hooks, Redux, Router)
-                JQuery, Firebase
+                React JS (Hooks, Redux, Router), React Native, HTML5, CSS3
+                (Flexbox, Grid CSS) JQuery, Firebase
               </p>
             </div>
           </Fade>
