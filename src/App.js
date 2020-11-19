@@ -2,7 +2,6 @@ import React, { useState } from "react";
 import styled, { createGlobalStyle } from "styled-components";
 import Navbar from "./components/Navbar/Navbar";
 import MainContent from "./components/MainContent/MainContent";
-import { CSSTransition } from "react-transition-group";
 
 const GlobalStyle = createGlobalStyle`
   * {
@@ -29,23 +28,6 @@ const StyledApp = styled.div`
   margin: 0;
   overflow: hidden;
   font-size: 2rem;
-
-  .navbarToggleTransition-enter {
-    transform: translateX(0);
-  }
-  .navbarToggleTransition-enter-done {
-    transform: translateX(270px);
-    transition: all 0.3s;
-  }
-  .navbarToggleTransition-exit {
-    transform: translateX(270px);
-    transition: all 0.3s;
-  }
-  .navbarToggleTransition-exit-done {
-    transform: translateX(0);
-
-    transition: all 0.3s;
-  }
 `;
 
 const NavbarToggleSpan = styled.span`
@@ -73,6 +55,9 @@ const NavbarToggle = styled.div`
   cursor: pointer;
   transition: all 0.5s;
   z-index: 30;
+
+  transform: ${({ showNavbar }) =>
+    showNavbar ? "translate(270px)" : "translate(0)"};
 
   ${NavbarToggleSpan}:nth-child(1) {
     transform: ${({ showNavbar }) =>
@@ -129,17 +114,11 @@ const App = () => {
     <StyledApp>
       <GlobalStyle />
 
-      <CSSTransition
-        in={showNavbar}
-        timeout={80}
-        classNames="navbarToggleTransition"
-      >
-        <NavbarToggle onClick={toggleMenu} showNavbar={showNavbar}>
-          <NavbarToggleSpan></NavbarToggleSpan>
-          <NavbarToggleSpan></NavbarToggleSpan>
-          <NavbarToggleSpan></NavbarToggleSpan>
-        </NavbarToggle>
-      </CSSTransition>
+      <NavbarToggle onClick={toggleMenu} showNavbar={showNavbar}>
+        <NavbarToggleSpan></NavbarToggleSpan>
+        <NavbarToggleSpan></NavbarToggleSpan>
+        <NavbarToggleSpan></NavbarToggleSpan>
+      </NavbarToggle>
       <Navbar
         showNavbar={showNavbar}
         toggleMenu={toggleMenu}

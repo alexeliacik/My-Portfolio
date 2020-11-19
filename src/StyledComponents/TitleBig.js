@@ -3,7 +3,7 @@ import styled from "styled-components";
 const TitleBig = styled.h2`
   color: #101010;
   font-family: "Oswald", sans-serif;
-  margin-bottom: 10px;
+  margin-bottom: 20px;
   font-weight: 500;
   font-size: 30px;
   letter-spacing: 3px;

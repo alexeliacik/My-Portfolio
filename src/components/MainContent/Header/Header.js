@@ -1,6 +1,5 @@
 import React from "react";
 import styled, { keyframes } from "styled-components";
-import Typed from "react-typed";
 import { FaAngleDoubleDown } from "react-icons/fa";
 import { Link } from "react-scroll";
 import headerBackgroundImage from "../../../assets/images/slider.jpg";
@@ -20,8 +19,13 @@ const arrowAnimation = keyframes`
     100% { transform: translateY(0)}
 `;
 
+const headerContentAnimation = keyframes`
+  from {opacity: 0; transform: translateY(20px);}
+  to {opacity: 1; transform: translate(0)}
+`;
+
 const StyledHeader = styled.header`
-  min-height: 100vh;
+  min-height: 95vh;
   background-image: url(${headerBackgroundImage});
   background-repeat: no-repeat;
   background-position: top;
@@ -36,24 +40,24 @@ const StyledHeader = styled.header`
     display: flex;
     flex-direction: column;
     align-items: center;
-    min-width: 50%;
+    min-width: 90%;
     color: #fff;
+    animation: ${headerContentAnimation} 1s;
 
     .image_wrap {
-      width: 200px;
-      height: 200px;
-      display: inline-block;
-      margin-bottom: 0;
+      width: 170px;
+      height: 170px;
 
-      img {
-        width: 100%;
-        border-radius: 50%;
-        border: 8px solid rgba(0, 0, 0, 0.1);
-      }
+      margin-bottom: 0;
+      background-image: url(${alex});
+      background-repeat: no-repeat;
+      background-position: center;
+      background-size: 120%;
+      border-radius: 50%;
     }
 
     h1 {
-      font-size: 45px;
+      font-size: 40px;
       font-family: "Oswald", sans-serif;
       font-weight: 500;
       margin: 0;
@@ -65,6 +69,9 @@ const StyledHeader = styled.header`
     h2 {
       margin-top: 8px;
       font-family: "Rambla", sans-serif;
+      font-size: 25px;
+      display: flex;
+      justify-content: center;
     }
   }
 
@@ -83,23 +90,61 @@ const StyledHeader = styled.header`
   }
 `;
 
+const textAnimation1 = keyframes`
+  0% {width: 1px; }
+  5% {width: 1px; }
+  20% {width: 220px; border-right: 4px solid #fff}
+  25% {width: 220px; border-right: none}
+  30% {width: 220px; border-right: 4px solid #fff}
+  35% {width: 220px; border-right: none}
+  40% {width: 220px; border-right: 4px solid #fff}
+  50% {width: 1px; border-right: 4px solid #fff}
+  50.1% {width: 1px; border-right: none}
+  100% {width: 1px; border: none;}
+`;
+
+const AnimatedText1 = styled.span`
+  display: inline-block;
+  animation: ${textAnimation1} 6s linear infinite;
+  overflow: hidden;
+  white-space: nowrap;
+  border-right: 4px solid #fff;
+  margin-left: 5px;
+`;
+
+const textAnimation2 = keyframes`
+  0% {width: 1px; border: none;}
+  50% {width: 1px; border: none;}
+  50.1% {width: 1px; border-right: 4px solid #fff}
+  55% {width: 1px; border-right: 4px solid #fff}
+  65% {width: 180px; border-right: 4px solid #fff}
+  70% {width: 180px; border-right: none}
+  75% {width: 180px; border-right: 4px solid #fff}
+  80% {width: 180px; border-right: none}
+  85% {width: 180px; border-right: 4px solid #fff}
+  90% {width: 180px; border-right: 4px solid #fff}
+  100% {width: 1px; border-right: 4px solid #fff}
+`;
+
+const AnimatedText2 = styled.span`
+  height: 30px;
+  display: inline-block;
+  animation: ${textAnimation2} 6s linear infinite;
+  overflow: hidden;
+  white-space: nowrap;
+  border-right: 4px solid #fff;
+`;
+
 const Header = () => {
   return (
     <StyledHeader id="Home">
       <div className="desc">
-        <div className="image_wrap">
-          <img src={alex} alt="alex" />
-        </div>
+        <div className="image_wrap"></div>
         <h1>ALEX ELIACIK</h1>
         <h2 className="cd-headline clip">
-          <span>I'm </span>
-
-          <Typed
-            strings={["Front-End Developer", "UX/UI Developer"]}
-            backSpeed={30}
-            typeSpeed={30}
-            loop
-          />
+          <span style={{ paddingRight: "10px;" }}>I'm </span>
+          <AnimatedText1>Front End Developer</AnimatedText1>
+          <AnimatedText2>UX/UI Developer</AnimatedText2>
         </h2>
       </div>
       <Link to="About Me" smooth={true} duration={1000}>

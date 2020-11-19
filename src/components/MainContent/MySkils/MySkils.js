@@ -7,112 +7,114 @@ import TitleSmall from "../../../StyledComponents/TitleSmall";
 import TitleBig from "../../../StyledComponents/TitleBig";
 import Fade from "react-reveal/Fade";
 
-const StyledMySkills = styled.div`
-  .skills {
-    display: flex;
-    justify-content: space-between;
-    font-family: "Rambla", sans-serif;
-    margin-bottom: 30px;
+const Skills = styled.div`
+  display: flex;
+  justify-content: space-between;
+  font-family: "Rambla", sans-serif;
+  margin-bottom: 30px;
 
-    @media (max-width: 768px) {
-      flex-direction: column;
-    }
+  & > div {
+    width: 30%;
+  }
 
-    .skillCard {
-      flex: 0 0 30%;
-      display: flex;
-      flex-direction: column;
-      text-align: center;
-      align-items: center;
-      border: 1px solid #ececec;
+  @media (max-width: 768px) {
+    flex-direction: column;
+    & > div {
       width: 100%;
-      padding: 30px;
-
-      @media (max-width: 768px) {
-        margin-bottom: 20px;
-        padding: 20px 30px;
-      }
-
-      .skillCardIcon {
-        margin-bottom: 35px;
-
-        svg {
-          opacity: 0.6;
-          width: 45px;
-          height: 35px;
-        }
-      }
-
-      .skillCardHeader {
-        font-weight: 700;
-        margin-bottom: 10px;
-
-        color: #101010;
-        font-size: 18px;
-      }
-
-      .skillCardText {
-        font-size: 15px;
-        line-height: 1.75em;
-        font-weight: 700;
-        color: #888;
-        margin: 0 20px;
-      }
-    }
-
-    @media (max-width: 768px) {
-      width: calc(91vw);
-      height: calc(79vw);
     }
   }
 `;
 
+const SkillsCard = styled.div`
+  width: 33%;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  align-items: center;
+  border: 1px solid #ececec;
+  width: 100%;
+  padding: 30px;
+
+  @media (max-width: 768px) {
+    margin-bottom: 20px;
+    padding: 20px 30px;
+  }
+`;
+
+const SkillsCardIcon = styled.div`
+  margin-bottom: 35px;
+
+  svg {
+    opacity: 0.6;
+    width: 45px;
+    height: 35px;
+  }
+`;
+
+const SkillsCardText = styled.p`
+  font-size: 15px;
+  line-height: 1.75em;
+  font-weight: 700;
+  color: #888;
+`;
+
+const SkillsCardHeader = styled.h3`
+  font-weight: 700;
+  margin-bottom: 20px;
+
+  color: #101010;
+  font-size: 18px;
+`;
+
 const MySkills = () => {
   return (
-    <StyledMySkills>
-      <Container id="My Skills" background="#f7f7f7">
-        <TitleSmall>WHAT I DO</TitleSmall>
-        <Fade left distance="60px">
-          <TitleBig>MY SKILLS</TitleBig>
-        </Fade>
+    <Container id="My Skills" background="#f7f7f7">
+      <TitleSmall>WHAT I DO</TitleSmall>
+      <Fade left distance="60px">
+        <TitleBig>MY SKILLS</TitleBig>
+      </Fade>
 
-        <div className="skills">
-          <Fade left delay={300} distance="60px">
-            <div className="skillCard">
-              <div className="skillCardIcon">
-                <GrPersonalComputer />
-              </div>
-              <h3 className="skillCardHeader">Web Technologies</h3>
-              <p className="skillCardText">
-                React JS (Hooks, Redux, Router), React Native, HTML5, CSS3
-                (Flexbox, Grid CSS) JQuery, Firebase
-              </p>
-            </div>
-          </Fade>
-          <Fade left delay={600} distance="60px">
-            <div className="skillCard">
-              <div className="skillCardIcon">
-                <GoLightBulb />
-              </div>
-              <h3 className="skillCardHeader">Tools</h3>
-              <p className="skillCardText">
-                Styled Components, Material UI React Reveal, React Bootsrap 4
-                React Transition Group
-              </p>
-            </div>
-          </Fade>
-          <Fade left delay={900} distance="60px">
-            <div className="skillCard">
-              <div className="skillCardIcon">
-                <GrIteration />
-              </div>
-              <h3 className="skillCardHeader">Other</h3>
-              <p className="skillCardText">Figma, GitHub, Netlify, Sass</p>
-            </div>
-          </Fade>
-        </div>
-      </Container>
-    </StyledMySkills>
+      <Skills>
+        <Fade left delay={300} distance="60px">
+          <SkillsCard>
+            <SkillsCardIcon>
+              <GrPersonalComputer />
+            </SkillsCardIcon>
+            <SkillsCardHeader>Web Technologies</SkillsCardHeader>
+            <SkillsCardText>HTML5, CSS3 (Flexbox, Grid CSS)</SkillsCardText>
+            <SkillsCardText>React JS (Hooks, Redux, Router)</SkillsCardText>
+            <SkillsCardText>React Native</SkillsCardText>
+            <SkillsCardText>JQuery</SkillsCardText>
+            <SkillsCardText>Firebase</SkillsCardText>
+          </SkillsCard>
+        </Fade>
+        <Fade left delay={600} distance="60px">
+          <SkillsCard>
+            <SkillsCardIcon>
+              <GoLightBulb />
+            </SkillsCardIcon>
+            <SkillsCardHeader>Tools</SkillsCardHeader>
+            <SkillsCardText>Styled Components</SkillsCardText>
+            <SkillsCardText>React Transition Group</SkillsCardText>
+            <SkillsCardText>Material UI </SkillsCardText>
+            <SkillsCardText>React Reveal</SkillsCardText>
+            <SkillsCardText>React Bootsrap 4</SkillsCardText>
+          </SkillsCard>
+        </Fade>
+        <Fade left delay={900} distance="60px">
+          <SkillsCard>
+            <SkillsCardIcon>
+              <GrIteration />
+            </SkillsCardIcon>
+            <SkillsCardHeader>Other</SkillsCardHeader>
+            <SkillsCardText>Git</SkillsCardText>
+            <SkillsCardText>Netlify</SkillsCardText>
+            <SkillsCardText>Sass</SkillsCardText>
+            <SkillsCardText>Figma</SkillsCardText>
+          </SkillsCard>
+        </Fade>
+      </Skills>
+    </Container>
   );
 };
 
