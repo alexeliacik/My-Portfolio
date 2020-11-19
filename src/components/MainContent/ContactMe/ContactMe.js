@@ -26,7 +26,7 @@ const Input = styled.input`
   margin: 0 2% 15px 0;
   background: transparent;
   border: none;
-  border-bottom: 1px solid #ececec;
+  border-bottom: 2px solid #ececec;
   padding: 18px 0px 10px;
   font-size: 15px;
   font-weight: 400;
@@ -42,8 +42,11 @@ const Input = styled.input`
 
   &:focus {
     outline: none;
-    transform: translateY(-1px);
     border-bottom: 2px solid #101010;
+
+    &::placeholder {
+      color: #101010;
+    }
   }
 `;
 
@@ -70,14 +73,11 @@ const Textarea = styled.textarea`
 
   &:focus {
     outline: none;
-    transform: translateY(-1px);
     border-bottom: 2px solid #101010;
-  }
 
-  &:focus {
-    outline: none;
-    transform: translateY(-1px);
-    border-bottom: 2px solid #101010;
+    &::placeholder {
+      color: #101010;
+    }
   }
 `;
 

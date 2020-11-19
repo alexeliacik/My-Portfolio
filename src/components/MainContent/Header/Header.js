@@ -4,6 +4,10 @@ import { FaAngleDoubleDown } from "react-icons/fa";
 import { Link } from "react-scroll";
 import headerBackgroundImage from "../../../assets/images/slider.jpg";
 import alex from "../../../assets/images/alex.jpg";
+import {
+  AnimatedText1,
+  AnimatedText2,
+} from "../../../StyledComponents/AnimatedText";
 
 const arrowAnimation = keyframes`
     0% {transform: translateY(0)}
@@ -90,51 +94,6 @@ const StyledHeader = styled.header`
   }
 `;
 
-const textAnimation1 = keyframes`
-  0% {width: 1px; }
-  5% {width: 1px; }
-  20% {width: 220px; border-right: 4px solid #fff}
-  25% {width: 220px; border-right: none}
-  30% {width: 220px; border-right: 4px solid #fff}
-  35% {width: 220px; border-right: none}
-  40% {width: 220px; border-right: 4px solid #fff}
-  50% {width: 1px; border-right: 4px solid #fff}
-  50.1% {width: 1px; border-right: none}
-  100% {width: 1px; border: none;}
-`;
-
-const AnimatedText1 = styled.span`
-  display: inline-block;
-  animation: ${textAnimation1} 6s linear infinite;
-  overflow: hidden;
-  white-space: nowrap;
-  border-right: 4px solid #fff;
-  margin-left: 5px;
-`;
-
-const textAnimation2 = keyframes`
-  0% {width: 1px; border: none;}
-  50% {width: 1px; border: none;}
-  50.1% {width: 1px; border-right: 4px solid #fff}
-  55% {width: 1px; border-right: 4px solid #fff}
-  65% {width: 180px; border-right: 4px solid #fff}
-  70% {width: 180px; border-right: none}
-  75% {width: 180px; border-right: 4px solid #fff}
-  80% {width: 180px; border-right: none}
-  85% {width: 180px; border-right: 4px solid #fff}
-  90% {width: 180px; border-right: 4px solid #fff}
-  100% {width: 1px; border-right: 4px solid #fff}
-`;
-
-const AnimatedText2 = styled.span`
-  height: 30px;
-  display: inline-block;
-  animation: ${textAnimation2} 6s linear infinite;
-  overflow: hidden;
-  white-space: nowrap;
-  border-right: 4px solid #fff;
-`;
-
 const Header = () => {
   return (
     <StyledHeader id="Home">
@@ -142,7 +101,7 @@ const Header = () => {
         <div className="image_wrap"></div>
         <h1>ALEX ELIACIK</h1>
         <h2 className="cd-headline clip">
-          <span style={{ paddingRight: "10px;" }}>I'm </span>
+          <span>I'm </span>
           <AnimatedText1>Front End Developer</AnimatedText1>
           <AnimatedText2>UX/UI Developer</AnimatedText2>
         </h2>

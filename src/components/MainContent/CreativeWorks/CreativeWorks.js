@@ -76,10 +76,10 @@ const PortfolioCard = styled.a`
 
   @media (max-width: 1024px) {
     width: calc(28vw);
-    height: calc(25vw);
+    height: calc(24.5vw);
   }
   @media (max-width: 768px) {
-    width: calc(91vw);
+    width: calc(92vw);
     height: calc(79vw);
   }
 `;

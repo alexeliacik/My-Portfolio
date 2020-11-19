@@ -1,5 +1,8 @@
 import React from "react";
-import Typed from "react-typed";
+import {
+  AnimatedText1,
+  AnimatedText2,
+} from "../../../StyledComponents/AnimatedText";
 import Container from "../../../StyledComponents/Container";
 import Button from "../../../StyledComponents/Button";
 import TitleSmall from "../../../StyledComponents/TitleSmall";
@@ -20,12 +23,8 @@ const AboutMe = () => {
       <Fade left delay={300} distance="60px">
         <TextBold>
           <span>I'm Alex Eliacik & </span>
-          <Typed
-            strings={["Front-End Developer", "UX/UI Developer"]}
-            backSpeed={30}
-            typeSpeed={30}
-            loop
-          />
+          <AnimatedText1>Front End Developer</AnimatedText1>
+          <AnimatedText2>UX/UI Developer</AnimatedText2>
         </TextBold>
         <Text>
           Highly skilled and self-motivated professional with hands-on

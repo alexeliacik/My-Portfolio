@@ -5,6 +5,7 @@ const TextBold = styled.p`
   font-weight: 700;
   font-family: "Rambla", sans-serif;
   margin-bottom: 15px;
+  display: flex;
 `;
 
 export default TextBold;
