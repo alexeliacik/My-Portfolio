@@ -45,15 +45,15 @@ const StyledHeader = styled.header`
     animation: ${headerContentAnimation} 1s;
 
     .image_wrap {
-      width: 170px;
-      height: 170px;
-
+      width: 180px;
+      height: 180px;
       margin-bottom: 0;
       background-image: url(${alex});
       background-repeat: no-repeat;
       background-position: center;
       background-size: 120%;
       border-radius: 50%;
+      border: 5px solid #888;
     }
 
     h1 {
