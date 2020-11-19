@@ -102,7 +102,7 @@ const Header = () => {
         <h1>ALEX ELIACIK</h1>
         <h2 className="cd-headline clip">
           <span>I'm </span>
-          <AnimatedText1>Front End Developer</AnimatedText1>
+          <AnimatedText1>Front-End Developer</AnimatedText1>
           <AnimatedText2>UX/UI Developer</AnimatedText2>
         </h2>
       </div>
