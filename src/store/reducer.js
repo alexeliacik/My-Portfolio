@@ -11,6 +11,13 @@ const initialState = {
   myWebsites: [
     {
       id: 1,
+      name: "In Street",
+      url: "https://www.instreet.com.tr/",
+      backgroundImage: "instreet",
+      usedTechnologies: "Javascript, HTML, CSS.",
+    },
+    {
+      id: 2,
       name: "Alaz Simsek",
       url: "http://alazsimsek.com",
       backgroundImage: "alazsimsek",
@@ -18,14 +25,14 @@ const initialState = {
         "JQuery, Bootstrap 4, Hamburger CSS, Owl Carousel, ScrollReveal, HTML, CSS.",
     },
     {
-      id: 2,
+      id: 3,
       name: "Eltesan Mobil",
       url: "http://www.eltesanmobil.com/en",
       backgroundImage: "eltesan",
       usedTechnologies: "Javascript, HTML, CSS.",
     },
     {
-      id: 3,
+      id: 4,
       name: "A.B.S Yeditepe",
       url: "http://alazsimsek.com",
       backgroundImage: "yeditepe",

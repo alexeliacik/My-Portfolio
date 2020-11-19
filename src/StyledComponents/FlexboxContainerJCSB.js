@@ -3,9 +3,9 @@ import styled from "styled-components";
 const FlexboxContainerJCSB = styled.div`
   display: flex;
   justify-content: space-between;
+  flex-wrap: wrap;
 
   & > div {
-    width: 100%;
     margin-bottom: 30px;
   }
 

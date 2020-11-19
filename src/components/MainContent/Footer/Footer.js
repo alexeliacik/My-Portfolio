@@ -5,19 +5,26 @@ import SocialMediaLink from "../../../StyledComponents/SocialMediaLink";
 
 const StyledFooter = styled.div`
   display: flex;
-  align-items: center;
+  justify-content: space-around;
   background: #101010;
   color: #fff;
+  height: 330px;
+
+  @media (max-width: 768px) {
+    flex-direction: column;
+    justify-content: center;
+  }
 `;
 
 const FooterCard = styled.div`
   display: flex;
   align-items: center;
   justify-content: center;
-  width: 33.33%;
-  height: 400px;
   text-align: center;
-  font-size: 18px;
+  font-size: 15px;
+  letter-spacing: 1px;
+  font-weight: 300;
+  padding: 20px;
 `;
 
 const Footer = () => {

@@ -28,6 +28,11 @@ const StyledMySkills = styled.div`
       width: 100%;
       padding: 30px;
 
+      @media (max-width: 768px) {
+        margin-bottom: 20px;
+        padding: 20px 30px;
+      }
+
       .skillCardIcon {
         margin-bottom: 35px;
 
