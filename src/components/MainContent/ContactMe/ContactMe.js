@@ -9,6 +9,7 @@ import Text from "../../../StyledComponents/Text";
 import FlexboxContainerJCSB from "../../../StyledComponents/FlexboxContainerJCSB";
 import TextBold from "../../../StyledComponents/TextBold";
 import Fade from "react-reveal/Fade";
+import ReCAPTCHA from "react-google-recaptcha";
 
 const ContactFormBox = styled.div`
   width: 48%;
@@ -102,6 +103,7 @@ const ContactMe = () => {
   const [email, setEmail] = useState("");
   const [name, setName] = useState("");
   const [message, setMessage] = useState("");
+  const [isVerified, setIsVerified] = useState(false);
 
   const handleName = (e) => {
     setName(e.target.value);
@@ -123,9 +125,15 @@ const ContactMe = () => {
     return () => clearTimeout(timer);
   }, [showPopUp]);
 
+  const verifyReCAPTCHA = (value) => {
+    if (value) {
+      setIsVerified(true);
+    }
+  };
+
   const sendEmail = (e) => {
     e.preventDefault();
-    if (name.length && message.length && email.length) {
+    if (name.length && message.length && email.length && isVerified) {
       setShowPopUp(true);
       setPopUpMessage("Message has been sent succesfully!");
 
@@ -145,7 +153,7 @@ const ContactMe = () => {
           },
           (error) => {
             setPopUpMessage(true);
-            setPopUpMessage("Something went Wrong!, please try again");
+            setPopUpMessage("Something went wrong, please try again!");
           }
         );
 
@@ -197,6 +205,10 @@ const ContactMe = () => {
                 placeholder="Message"
                 name="message"
                 onChange={(e) => handleMessage(e)}
+              />
+              <ReCAPTCHA
+                sitekey="6LciueQZAAAAAFDghTOEMtbJYoRFcmyfAp_lA4hQ"
+                onChange={verifyReCAPTCHA}
               />
               <Button type="submit" value="Send">
                 Say Hello!

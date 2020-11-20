@@ -11,14 +11,14 @@ import {
 
 const arrowAnimation = keyframes`
     0% {transform: translateY(0)}
-    15% { transform: translateY(-75%)}
-    23% { transform: translateY(-75%)}
+    15% { transform: translateY(-75px)}
+    23% { transform: translateY(-75px)}
     30% { transform: translateY(0)}
-    38% { transform: translateY(-37%)}
-    44% { transform: translateY(-37%)}
+    38% { transform: translateY(-37px)}
+    44% { transform: translateY(-37px)}
     54% { transform: translateY(0)}
-    61% { transform: translateY(-7.5%)}
-    68% { transform: translateY(-7.5%)}
+    61% { transform: translateY(-7.5px)}
+    68% { transform: translateY(-7.5px)}
     73% { transform: translateY(0)}
     100% { transform: translateY(0)}
 `;
@@ -47,6 +47,9 @@ const StyledHeader = styled.header`
     min-width: 90%;
     color: #fff;
     animation: ${headerContentAnimation} 1s;
+    animation-delay: 1.3s;
+    opacity: 0;
+    animation-fill-mode: forwards;
 
     .image_wrap {
       width: 180px;
@@ -61,7 +64,7 @@ const StyledHeader = styled.header`
     }
 
     h1 {
-      font-size: 40px;
+      font-size: 30px;
       font-family: "Oswald", sans-serif;
       font-weight: 500;
       margin: 0;
