@@ -22,8 +22,7 @@ const AboutMe = () => {
 
       <Fade left delay={300} distance="60px">
         <TextBold>
-          <span>I'm Alex Eliacik & </span>
-          <AnimatedText1>Front-End Developer</AnimatedText1>
+          I'm Alex Eliacik &<AnimatedText1>Front-End Developer</AnimatedText1>
           <AnimatedText2>UX/UI Developer</AnimatedText2>
         </TextBold>
         <Text>

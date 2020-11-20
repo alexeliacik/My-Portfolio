@@ -18,13 +18,9 @@ const GlobalStyle = createGlobalStyle`
 `;
 
 const StyledApp = styled.div`
-  padding: 0;
-  margin: 0;
   display: flex;
   justify-content: flex-end;
-  margin: 0;
   overflow: hidden;
-  font-size: 2rem;
 `;
 
 const NavbarToggleSpan = styled.span`
@@ -33,17 +29,17 @@ const NavbarToggleSpan = styled.span`
   width: 25px;
   background-color: #fff;
   border-radius: 5px;
-  transition: all 0.1s;
+  transition: all 0.3s;
 `;
 
 const NavbarToggle = styled.div`
   position: fixed;
   display: flex;
   flex-direction: column;
-  top: 15px;
-  left: 20px;
   justify-content: center;
   align-items: center;
+  top: 15px;
+  left: 20px;
   width: 50px;
   height: 50px;
   background-color: #101010;

@@ -3,11 +3,11 @@ import styled, { keyframes } from "styled-components";
 const textAnimation1 = keyframes`
   0% {width: 0.001px;border: transparent }
   5% {width: 0.001px; border: transparent}
-  20% {width: 220px; border-right: 4px solid #fff}
-  25% {width: 220px; border-right: transparent}
-  30% {width: 220px; border-right: 4px solid #fff}
-  35% {width: 220px; border-right: transparent}
-  40% {width: 220px; border-right: 4px solid #fff}
+  20% {width: 230px; border-right: 4px solid #fff}
+  25% {width: 230px; border-right: transparent}
+  30% {width: 230px; border-right: 4px solid #fff}
+  35% {width: 230px; border-right: transparent}
+  40% {width: 230px; border-right: 4px solid #fff}
   50% {width: 0.001px; border-right: 4px solid #fff}
   50.1% {width: 0.001px; border-right: transparent}
   100% {width: 0.001px; border: transparent;}

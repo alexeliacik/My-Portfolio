@@ -1,70 +1,18 @@
 import React from "react";
-import styled from "styled-components";
-import { GrPersonalComputer, GrIteration } from "react-icons/gr";
-import { GoLightBulb } from "react-icons/go";
 import Container from "../../../StyledComponentsShared/Container";
 import TitleSmall from "../../../StyledComponentsShared/TitleSmall";
 import TitleBig from "../../../StyledComponentsShared/TitleBig";
 import Fade from "react-reveal/Fade";
+import { GrPersonalComputer, GrIteration } from "react-icons/gr";
+import { GoLightBulb } from "react-icons/go";
 
-const Skills = styled.div`
-  display: flex;
-  justify-content: space-between;
-  font-family: "Rambla", sans-serif;
-  margin-bottom: 30px;
-
-  & > div {
-    width: 30%;
-  }
-
-  @media (max-width: 768px) {
-    flex-direction: column;
-    & > div {
-      width: 100%;
-    }
-  }
-`;
-
-const SkillsCard = styled.div`
-  width: 33%;
-  display: flex;
-  flex-direction: column;
-  text-align: center;
-  align-items: center;
-  border: 1px solid #ececec;
-  width: 100%;
-  padding: 30px;
-
-  @media (max-width: 768px) {
-    margin-bottom: 20px;
-    padding: 20px 30px;
-  }
-`;
-
-const SkillsCardIcon = styled.div`
-  margin-bottom: 35px;
-
-  svg {
-    opacity: 0.6;
-    width: 45px;
-    height: 35px;
-  }
-`;
-
-const SkillsCardText = styled.p`
-  font-size: 15px;
-  line-height: 1.75em;
-  font-weight: 700;
-  color: #888;
-`;
-
-const SkillsCardHeader = styled.h3`
-  font-weight: 700;
-  margin-bottom: 20px;
-
-  color: #101010;
-  font-size: 18px;
-`;
+import {
+  SkillsCardWrapper,
+  SkillsCard,
+  SkillsCardIcon,
+  SkillsCardText,
+  SkillsCardHeader,
+} from "./StyledMySkills";
 
 const MySkills = () => {
   return (
@@ -74,7 +22,7 @@ const MySkills = () => {
         <TitleBig>MY SKILLS</TitleBig>
       </Fade>
 
-      <Skills>
+      <SkillsCardWrapper>
         <Fade left delay={300} distance="60px">
           <SkillsCard>
             <SkillsCardIcon>
@@ -113,7 +61,7 @@ const MySkills = () => {
             <SkillsCardText>Figma</SkillsCardText>
           </SkillsCard>
         </Fade>
-      </Skills>
+      </SkillsCardWrapper>
     </Container>
   );
 };

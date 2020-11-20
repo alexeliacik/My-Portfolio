@@ -1,27 +1,16 @@
 import React, { useEffect, useCallback } from "react";
-import styled from "styled-components";
 import { useDispatch, useSelector } from "react-redux";
+import { closeNavbar } from "../../actions/";
+import { StyledMainContent } from "./StyledMainContent";
+
 import AboutMe from "./AboutMe/AboutMe";
 import Header from "./Header/Header";
-import MySkils from "./MySkils/MySkils";
+import MySkills from "./MySkills/MySkills";
 import MyWebsites from "./MyWebsites/MyWebsites";
 import CreativeWorks from "./CreativeWorks/CreativeWorks";
 import MySongs from "./MySongs/MySongs";
 import Footer from "./Footer/Footer";
 import ContactMe from "./ContactMe/ContactMe";
-import { closeNavbar } from "../../actions/";
-
-const StyledMainContent = styled.main`
-  position: relative;
-  width: 77%;
-  transform: ${({ showNavbar }) =>
-    showNavbar ? "translateX(270px)" : "translateX(0)"};
-  transition: all 0.5s;
-
-  @media (max-width: 1024px) {
-    width: 100%;
-  }
-`;
 
 const MainContent = () => {
   const showNavbar = useSelector((state) => state.showNavbar);
@@ -41,7 +30,7 @@ const MainContent = () => {
     >
       <Header />
       <AboutMe />
-      <MySkils />
+      <MySkills />
       <MyWebsites />
       <CreativeWorks />
       <MySongs />
