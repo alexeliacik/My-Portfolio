@@ -1,10 +1,10 @@
 import React from "react";
 import styled from "styled-components";
 import { useSelector } from "react-redux";
-import Container from "../../../StyledComponents/Container";
-import TitleSmall from "../../../StyledComponents/TitleSmall";
-import FlexboxContainerJCSB from "../../../StyledComponents/FlexboxContainerJCSB";
-import TitleBig from "../../../StyledComponents/TitleBig";
+import Container from "../../../StyledComponentsShared/Container";
+import TitleSmall from "../../../StyledComponentsShared/TitleSmall";
+import FlexboxContainerJCSB from "../../../StyledComponentsShared/FlexboxContainerJCSB";
+import TitleBig from "../../../StyledComponentsShared/TitleBig";
 import Fade from "react-reveal/Fade";
 
 const Iframe = styled.iframe`

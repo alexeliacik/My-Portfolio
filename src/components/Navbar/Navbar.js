@@ -3,7 +3,7 @@ import styled from "styled-components";
 import NavbarLinks from "./NavbarLinks/NavbarLinks";
 import logo from "../../assets/images/favicon.ico";
 import { FaLinkedin, FaGithub } from "react-icons/fa";
-import SocialMediaLink from "../../StyledComponents/SocialMediaLink";
+import SocialMediaLink from "../../StyledComponentsShared/SocialMediaLink";
 import { useSelector } from "react-redux";
 
 const StyledNav = styled.nav`

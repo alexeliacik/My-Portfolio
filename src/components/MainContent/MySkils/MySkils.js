@@ -2,9 +2,9 @@ import React from "react";
 import styled from "styled-components";
 import { GrPersonalComputer, GrIteration } from "react-icons/gr";
 import { GoLightBulb } from "react-icons/go";
-import Container from "../../../StyledComponents/Container";
-import TitleSmall from "../../../StyledComponents/TitleSmall";
-import TitleBig from "../../../StyledComponents/TitleBig";
+import Container from "../../../StyledComponentsShared/Container";
+import TitleSmall from "../../../StyledComponentsShared/TitleSmall";
+import TitleBig from "../../../StyledComponentsShared/TitleBig";
 import Fade from "react-reveal/Fade";
 
 const Skills = styled.div`

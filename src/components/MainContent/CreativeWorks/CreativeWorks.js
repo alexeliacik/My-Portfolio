@@ -1,11 +1,11 @@
 import React from "react";
 import styled from "styled-components";
 import { useSelector } from "react-redux";
-import Container from "../../../StyledComponents/Container";
-import TitleSmall from "../../../StyledComponents/TitleSmall";
-import TitleBig from "../../../StyledComponents/TitleBig";
-import Text from "../../../StyledComponents/Text";
-import FlexboxContainerJCSB from "../../../StyledComponents/FlexboxContainerJCSB";
+import Container from "../../../StyledComponentsShared/Container";
+import TitleSmall from "../../../StyledComponentsShared/TitleSmall";
+import TitleBig from "../../../StyledComponentsShared/TitleBig";
+import Text from "../../../StyledComponentsShared/Text";
+import FlexboxContainerJCSB from "../../../StyledComponentsShared/FlexboxContainerJCSB";
 import Fade from "react-reveal/Fade";
 
 const PortfolioCardTitle = styled.h2`
@@ -100,7 +100,7 @@ const CreativeWorks = () => {
       <FlexboxContainerJCSB>
         {creativeWorks.map((creativeWork) => (
           <Fade
-            key={creativeWork.name}
+            key={creativeWork.id}
             left
             delay={creativeWork.id * 300}
             distance="60px"

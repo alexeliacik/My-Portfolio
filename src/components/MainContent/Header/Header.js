@@ -7,7 +7,7 @@ import alex from "../../../assets/images/alex.jpg";
 import {
   AnimatedText1,
   AnimatedText2,
-} from "../../../StyledComponents/AnimatedText";
+} from "../../../StyledComponentsShared/AnimatedText";
 
 const arrowAnimation = keyframes`
     0% {transform: translateY(0)}

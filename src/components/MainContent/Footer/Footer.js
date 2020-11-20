@@ -1,7 +1,7 @@
 import React from "react";
 import styled from "styled-components";
 import { FaLinkedin, FaGithub } from "react-icons/fa";
-import SocialMediaLink from "../../../StyledComponents/SocialMediaLink";
+import SocialMediaLink from "../../../StyledComponentsShared/SocialMediaLink";
 
 const StyledFooter = styled.div`
   display: flex;

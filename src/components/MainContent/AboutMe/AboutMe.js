@@ -2,13 +2,13 @@ import React from "react";
 import {
   AnimatedText1,
   AnimatedText2,
-} from "../../../StyledComponents/AnimatedText";
-import Container from "../../../StyledComponents/Container";
-import Button from "../../../StyledComponents/Button";
-import TitleSmall from "../../../StyledComponents/TitleSmall";
-import TitleBig from "../../../StyledComponents/TitleBig";
-import Text from "../../../StyledComponents/Text";
-import TextBold from "../../../StyledComponents/TextBold";
+} from "../../../StyledComponentsShared/AnimatedText";
+import Container from "../../../StyledComponentsShared/Container";
+import Button from "../../../StyledComponentsShared/Button";
+import TitleSmall from "../../../StyledComponentsShared/TitleSmall";
+import TitleBig from "../../../StyledComponentsShared/TitleBig";
+import Text from "../../../StyledComponentsShared/Text";
+import TextBold from "../../../StyledComponentsShared/TextBold";
 import Fade from "react-reveal/Fade";
 import { Link } from "react-scroll";
 

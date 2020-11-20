@@ -1,13 +1,13 @@
 import React, { useEffect, useState } from "react";
 import styled, { keyframes } from "styled-components";
 import emailjs from "emailjs-com";
-import Container from "../../../StyledComponents/Container";
-import Button from "../../../StyledComponents/Button";
-import TitleSmall from "../../../StyledComponents/TitleSmall";
-import TitleBig from "../../../StyledComponents/TitleBig";
-import Text from "../../../StyledComponents/Text";
-import FlexboxContainerJCSB from "../../../StyledComponents/FlexboxContainerJCSB";
-import TextBold from "../../../StyledComponents/TextBold";
+import Container from "../../../StyledComponentsShared/Container";
+import Button from "../../../StyledComponentsShared/Button";
+import TitleSmall from "../../../StyledComponentsShared/TitleSmall";
+import TitleBig from "../../../StyledComponentsShared/TitleBig";
+import Text from "../../../StyledComponentsShared/Text";
+import FlexboxContainerJCSB from "../../../StyledComponentsShared/FlexboxContainerJCSB";
+import TextBold from "../../../StyledComponentsShared/TextBold";
 import Fade from "react-reveal/Fade";
 import ReCAPTCHA from "react-google-recaptcha";
 
