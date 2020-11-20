@@ -1,5 +1,6 @@
 import React, { useEffect, useCallback } from "react";
 import styled from "styled-components";
+import { useDispatch, useSelector } from "react-redux";
 import AboutMe from "./AboutMe/AboutMe";
 import Header from "./Header/Header";
 import MySkils from "./MySkils/MySkils";
@@ -8,6 +9,7 @@ import CreativeWorks from "./CreativeWorks/CreativeWorks";
 import MySongs from "./MySongs/MySongs";
 import Footer from "./Footer/Footer";
 import ContactMe from "./ContactMe/ContactMe";
+import { closeNavbar } from "../../actions/";
 
 const StyledMainContent = styled.main`
   position: relative;
@@ -21,10 +23,10 @@ const StyledMainContent = styled.main`
   }
 `;
 
-const MainContent = ({ showNavbar, closeMenu, shopPopUp }) => {
-  const handleScroll = useCallback(() => {
-    closeMenu();
-  }, [closeMenu]);
+const MainContent = () => {
+  const showNavbar = useSelector((state) => state.showNavbar);
+  const dispatch = useDispatch();
+  const handleScroll = useCallback(() => dispatch(closeNavbar()), [dispatch]);
 
   useEffect(() => {
     document.addEventListener("scroll", handleScroll, { passive: true });
@@ -34,8 +36,8 @@ const MainContent = ({ showNavbar, closeMenu, shopPopUp }) => {
   return (
     <StyledMainContent
       showNavbar={showNavbar}
-      onScroll={handleScroll}
-      onClick={closeMenu}
+      onScroll={() => dispatch(closeNavbar())}
+      onClick={() => dispatch(closeNavbar())}
     >
       <Header />
       <AboutMe />

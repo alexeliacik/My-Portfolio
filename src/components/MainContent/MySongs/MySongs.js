@@ -27,7 +27,7 @@ const IframeCard = styled.a`
 `;
 
 const MySongs = () => {
-  const mySongs = useSelector(({ mySongs }) => mySongs);
+  const mySongs = useSelector((state) => state.store.mySongs);
 
   return (
     <Container background="#fff" id="My Songs">

@@ -4,6 +4,7 @@ import NavbarLinks from "./NavbarLinks/NavbarLinks";
 import logo from "../../assets/images/favicon.ico";
 import { FaLinkedin, FaGithub } from "react-icons/fa";
 import SocialMediaLink from "../../StyledComponents/SocialMediaLink";
+import { useSelector } from "react-redux";
 
 const StyledNav = styled.nav`
   position: fixed;
@@ -75,7 +76,8 @@ const NavbarFooter = styled.div`
   }
 `;
 
-const Navbar = ({ showNavbar, closeMenu }) => {
+const Navbar = () => {
+  const showNavbar = useSelector((state) => state.showNavbar);
   return (
     <StyledNav showNavbar={showNavbar}>
       <Logo>
@@ -84,7 +86,9 @@ const Navbar = ({ showNavbar, closeMenu }) => {
           <span>ALEX ELIACIK</span>
         </a>
       </Logo>
-      <NavbarLinks closeMenu={closeMenu} />
+      <NavbarLinks
+      //  closeNavbar={closeNavbar}
+      />
       <NavbarFooter>
         <SocialMediaLink
           color="#101010"

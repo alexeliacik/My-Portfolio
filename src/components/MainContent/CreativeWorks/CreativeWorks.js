@@ -85,7 +85,7 @@ const PortfolioCard = styled.a`
 `;
 
 const CreativeWorks = () => {
-  const creativeWorks = useSelector(({ creativeWorks }) => creativeWorks);
+  const creativeWorks = useSelector(({ store }) => store.mySongs);
 
   return (
     <Container background="#f7f7f7" id="Creative Works">

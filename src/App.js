@@ -1,8 +1,9 @@
-import React, { useState } from "react";
+import React from "react";
 import styled, { createGlobalStyle } from "styled-components";
 import Navbar from "./components/Navbar/Navbar";
 import MainContent from "./components/MainContent/MainContent";
-
+import { useDispatch, useSelector } from "react-redux";
+import { toggleNavbar } from "./actions/index";
 const GlobalStyle = createGlobalStyle`
   * {
       margin:0;
@@ -100,35 +101,23 @@ const NavbarToggle = styled.div`
 `;
 
 const App = () => {
-  const [showNavbar, setShowNavbar] = useState(false);
-
-  const toggleMenu = () => {
-    setShowNavbar((prevState) => !prevState);
-  };
-
-  const closeMenu = () => {
-    setShowNavbar(false);
-  };
+  const showNavbar = useSelector((state) => state.showNavbar);
+  const dispatch = useDispatch();
 
   return (
     <StyledApp>
       <GlobalStyle />
 
-      <NavbarToggle onClick={toggleMenu} showNavbar={showNavbar}>
+      <NavbarToggle
+        onClick={() => dispatch(toggleNavbar())}
+        showNavbar={showNavbar}
+      >
         <NavbarToggleSpan></NavbarToggleSpan>
         <NavbarToggleSpan></NavbarToggleSpan>
         <NavbarToggleSpan></NavbarToggleSpan>
       </NavbarToggle>
-      <Navbar
-        showNavbar={showNavbar}
-        toggleMenu={toggleMenu}
-        closeMenu={closeMenu}
-      />
-      <MainContent
-        showNavbar={showNavbar}
-        toggleMenu={toggleMenu}
-        closeMenu={closeMenu}
-      />
+      <Navbar />
+      <MainContent />
     </StyledApp>
   );
 };

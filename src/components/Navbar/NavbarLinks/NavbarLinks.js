@@ -1,8 +1,8 @@
 import React from "react";
-import { useSelector } from "react-redux";
+import { useSelector, useDispatch } from "react-redux";
+import { closeNavbar } from "../../../actions";
 import styled from "styled-components";
 import { Link } from "react-scroll";
-
 const Ul = styled.ul`
   a.active li {
     font-weight: 700;
@@ -29,14 +29,15 @@ const Li = styled.li`
   }
 `;
 
-const NavbarLinks = ({ closeMenu }) => {
-  const navbarLinks = useSelector(({ navbarLinks }) => navbarLinks);
+const NavbarLinks = () => {
+  const navbarLinks = useSelector((state) => state.store.navbarLinks);
+  const dispatch = useDispatch();
   return (
     <>
       <Ul>
         {navbarLinks.map((link) => (
           <Link
-            onClick={closeMenu}
+            onClick={() => dispatch(closeNavbar())}
             key={link.name}
             activeClass="active"
             spy={true}

@@ -85,8 +85,7 @@ const Card = styled.a`
 `;
 
 const MyWebsites = () => {
-  const myWebsites = useSelector(({ myWebsites }) => myWebsites);
-
+  const myWebsites = useSelector(({ store }) => store.myWebsites);
   return (
     <Container background="#fff" id="My Websites">
       <TitleSmall>PORTFOLIO</TitleSmall>

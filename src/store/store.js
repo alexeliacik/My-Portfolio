@@ -82,8 +82,8 @@ const initialState = {
   ],
 };
 
-const reducer = (state = initialState, action) => {
+const store = (state = initialState, action) => {
   return state;
 };
 
-export default reducer;
+export default store;
