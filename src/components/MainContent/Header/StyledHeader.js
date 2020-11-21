@@ -22,7 +22,7 @@ to {opacity: 1; transform: translate(0)}
 `;
 
 const StyledHeader = styled.header`
-  min-height: 95vh;
+  min-height: 85vh;
   background-image: url(${headerBackgroundImage});
   background-repeat: no-repeat;
   background-position: top;

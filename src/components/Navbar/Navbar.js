@@ -1,6 +1,11 @@
 import React from "react";
 import { useSelector } from "react-redux";
 
+import logo from "../../assets/images/favicon.ico";
+import NavbarLinks from "./NavbarLinks/NavbarLinks";
+import SocialMediaLink from "../../StyledComponentsShared/SocialMediaLink";
+import { FaLinkedin, FaGithub } from "react-icons/fa";
+
 import {
   StyledNav,
   Logo,
@@ -10,13 +15,10 @@ import {
   LogoLink,
   NavbarFooterText,
 } from "./StyledNavbar";
-import logo from "../../assets/images/favicon.ico";
-import NavbarLinks from "./NavbarLinks/NavbarLinks";
-import SocialMediaLink from "../../StyledComponentsShared/SocialMediaLink";
-import { FaLinkedin, FaGithub } from "react-icons/fa";
-
+//
 const Navbar = () => {
   const showNavbar = useSelector((state) => state.showNavbar);
+
   return (
     <StyledNav showNavbar={showNavbar}>
       <Logo>

@@ -2,7 +2,6 @@ import styled from "styled-components";
 
 const StyledNav = styled.nav`
   position: fixed;
-  bottom: 0;
   top: 0;
   left: 0;
   width: 23%;
@@ -12,15 +11,15 @@ const StyledNav = styled.nav`
   z-index: 1001;
   color: rgb(136, 136, 136);
   background: #fff;
-  transition: 0.5s;
+  transition: all 0.5s;
   box-shadow: 0 0 30px rgba(0, 0, 0, 0.05);
   transform: ${({ showNavbar }) =>
-    showNavbar ? "translateX(-100%)" : "translateX(0)"};
+    showNavbar ? "translateX(-270px)" : "translateX(0)"};
 
   @media (max-width: 1024px) {
     width: 270px;
     transform: ${({ showNavbar }) =>
-      showNavbar ? "translateX(0)" : "translateX(-100%)"};
+      showNavbar ? "translateX(0)" : "translateX(-270px)"};
   }
 `;
 

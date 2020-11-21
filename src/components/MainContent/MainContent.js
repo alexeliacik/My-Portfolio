@@ -25,7 +25,6 @@ const MainContent = () => {
   return (
     <StyledMainContent
       showNavbar={showNavbar}
-      onScroll={() => dispatch(closeNavbar())}
       onClick={() => dispatch(closeNavbar())}
     >
       <Header />
