@@ -1,1 +1,1 @@
-<a href="https://www.alexeliacik.com">www.alexeliacik.com</a>
+<a href="http://www.alexeliacik.com">www.alexeliacik.com</a>
