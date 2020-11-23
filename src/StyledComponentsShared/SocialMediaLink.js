@@ -7,7 +7,7 @@ const SocialMediaLink = styled.a`
   svg {
     transition: all 0.2s;
     font-size: 2em;
-    margin: 4px;
+    margin: 6px;
   }
   &:hover {
     svg {

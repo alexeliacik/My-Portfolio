@@ -4,7 +4,7 @@ import { useSelector } from "react-redux";
 import logo from "../../assets/images/favicon.ico";
 import NavbarLinks from "./NavbarLinks/NavbarLinks";
 import SocialMediaLink from "../../StyledComponentsShared/SocialMediaLink";
-import { FaLinkedin, FaGithub } from "react-icons/fa";
+import { FaLinkedin, FaGithub, FaMedium } from "react-icons/fa";
 
 import {
   StyledNav,
@@ -44,6 +44,14 @@ const Navbar = () => {
           href="https://github.com/alexeliacik"
         >
           <FaGithub />
+        </SocialMediaLink>
+        <SocialMediaLink
+          color="#101010"
+          target="_blank"
+          rel="noopener noreferrer"
+          href="https://alexeliacik.medium.com/"
+        >
+          <FaMedium />
         </SocialMediaLink>
         <NavbarFooterText>
           © 2020 Alex Eliacik. All rights reserved.

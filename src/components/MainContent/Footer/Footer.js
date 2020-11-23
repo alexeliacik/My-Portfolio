@@ -1,5 +1,5 @@
 import React from "react";
-import { FaLinkedin, FaGithub } from "react-icons/fa";
+import { FaLinkedin, FaGithub, FaMedium } from "react-icons/fa";
 import SocialMediaLink from "../../../StyledComponentsShared/SocialMediaLink";
 
 import { StyledFooter, FooterCard } from "./StyledFooter";
@@ -25,6 +25,14 @@ const Footer = () => {
           href="https://github.com/alexeliacik"
         >
           <FaGithub />
+        </SocialMediaLink>
+        <SocialMediaLink
+          color="#fff"
+          target="_blank"
+          rel="noopener noreferrer"
+          href="https://alexeliacik.medium.com/"
+        >
+          <FaMedium />
         </SocialMediaLink>
       </FooterCard>
     </StyledFooter>
