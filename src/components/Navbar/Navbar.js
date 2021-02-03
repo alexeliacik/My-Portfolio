@@ -22,9 +22,9 @@ const Navbar = () => {
   return (
     <StyledNav showNavbar={showNavbar}>
       <Logo>
-        <LogoLink href="http://alexeliacik.com/">
+        <LogoLink href="http://alieliacik.com/">
           <LogoImage src={logo} alt="logo" />
-          <LogoText>ALEX ELIACIK</LogoText>
+          <LogoText>ALI ELIACIK</LogoText>
         </LogoLink>
       </Logo>
       <NavbarLinks />
@@ -33,7 +33,7 @@ const Navbar = () => {
           color="#101010"
           target="_blank"
           rel="noopener noreferrer"
-          href="https://www.linkedin.com/in/alex-eliacik-929990197/"
+          href="https://www.linkedin.com/in/ali-eliacik-929990197/"
         >
           <FaLinkedin />
         </SocialMediaLink>
@@ -41,7 +41,7 @@ const Navbar = () => {
           color="#101010"
           target="_blank"
           rel="noopener noreferrer"
-          href="https://github.com/alexeliacik"
+          href="https://github.com/alieliacik"
         >
           <FaGithub />
         </SocialMediaLink>
@@ -49,12 +49,12 @@ const Navbar = () => {
           color="#101010"
           target="_blank"
           rel="noopener noreferrer"
-          href="https://alexeliacik.medium.com/"
+          href="https://alieliacik.medium.com/"
         >
           <FaMedium />
         </SocialMediaLink>
         <NavbarFooterText>
-          © 2020 Alex Eliacik. All rights reserved.
+          © 2020 Ali Eliacik. All rights reserved.
         </NavbarFooterText>
       </NavbarFooter>
     </StyledNav>

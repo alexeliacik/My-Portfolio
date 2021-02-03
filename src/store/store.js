@@ -43,7 +43,7 @@ const initialState = {
     {
       id: 1,
       name: "Trivia Db Quiz App",
-      url: "https://github.com/alexeliacik/Trivia-Db-Quiz-App-ReactJS",
+      url: "https://github.com/alieliacik/Trivia-Db-Quiz-App-ReactJS",
       backgroundImage: "triviadb",
       usedTechnologies:
         "React JS (React Hooks, Styled Components, React Transition Group, React Router), HTML, CSS.",
@@ -52,7 +52,7 @@ const initialState = {
       id: 2,
       name: "Movie Db Api",
       url:
-        "https://github.com/alexeliacik/MovieDB-API--Styled-Components-Master",
+        "https://github.com/alieliacik/MovieDB-API--Styled-Components-Master",
       backgroundImage: "moviedb",
       usedTechnologies:
         "React JS (React Hooks, Styled Components, React Transition Group, React Router, Material UI), HTML, CSS.",
@@ -60,7 +60,7 @@ const initialState = {
     {
       id: 3,
       name: "Shopping Cart",
-      url: "https://github.com/alexeliacik/Shopping-Cart-ReacJS",
+      url: "https://github.com/alieliacik/Shopping-Cart-ReacJS",
       backgroundImage: "shoppingcart",
       usedTechnologies:
         "React JS (React Hooks, Styled Components, React Transition Group, Material UI, Uuid), HTML, CSS.",

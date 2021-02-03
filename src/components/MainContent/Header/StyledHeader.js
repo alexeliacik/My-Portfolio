@@ -1,6 +1,6 @@
 import styled, { keyframes } from "styled-components";
 import headerBackgroundImage from "../../../assets/images/slider.jpg";
-import alex from "../../../assets/images/alex.jpg";
+import ali from "../../../assets/images/ali.jpg";
 
 const arrowAnimation = keyframes`
 0% {transform: translateY(0)}
@@ -49,7 +49,7 @@ const HeaderContainer = styled.div`
 const HeaderImage = styled.div`
   width: 180px;
   height: 180px;
-  background-image: url(${alex});
+  background-image: url(${ali});
   background-repeat: no-repeat;
   background-position: center;
   background-size: 120%;

@@ -96,10 +96,10 @@ const ContactMe = () => {
       <FlexboxContainerJCSB>
         <ContactFormBox>
           <Fade left delay={300} distance="60px">
-            <TextBold>ALEX ELIACIK</TextBold>
+            <TextBold>ALI ELIACIK</TextBold>
             <Text>I am willing to relocate on my own expenses, Thank you.</Text>
             <Text>ADDRESS: North York, Toronto, ON Canada</Text>
-            <Text>EMAIL: alexeliacik@gmail.com</Text>
+            <Text>EMAIL: ali.eliacik@hotmail.com</Text>
             <Text>PHONE: +1 416 388 50 46</Text>
           </Fade>
         </ContactFormBox>

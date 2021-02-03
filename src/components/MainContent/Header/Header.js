@@ -19,7 +19,7 @@ const Header = () => {
     <StyledHeader id="Home">
       <HeaderContainer>
         <HeaderImage></HeaderImage>
-        <HeaderTextName>ALEX ELIACIK</HeaderTextName>
+        <HeaderTextName>ALI ELIACIK</HeaderTextName>
         <AnimatedTextContainer>
           I'm
           <AnimatedText1>Front-End Developer</AnimatedText1>
