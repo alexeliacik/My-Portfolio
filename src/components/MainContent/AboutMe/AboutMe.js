@@ -42,9 +42,7 @@ const AboutMe = () => {
           learning new information, procedures, and technologies. Exceptionally
           organized and able to multitask. <br />
           <br /> Possesses excellent communication, organizational,
-          administrative, analytical, and problem solving skills. Articulate and
-          refined communicator with operational command over English, Kurdish
-          and Turkish language.
+          administrative, analytical, and problem solving skills.
         </Text>
         <Button>
           <Link to="Contact" smooth={true}>
