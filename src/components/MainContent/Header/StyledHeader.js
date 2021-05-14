@@ -1,6 +1,6 @@
-import styled, { keyframes } from "styled-components";
-import headerBackgroundImage from "../../../assets/images/slider.jpg";
-import ali from "../../../assets/images/ali.jpg";
+import styled, { keyframes } from 'styled-components'
+import headerBackgroundImage from '../../../assets/images/slider.jpg'
+import ali from '../../../assets/images/ali.jpg'
 
 const arrowAnimation = keyframes`
 0% {transform: translateY(0)}
@@ -14,12 +14,12 @@ const arrowAnimation = keyframes`
 68% { transform: translateY(-7.5px)}
 73% { transform: translateY(0)}
 100% { transform: translateY(0)}
-`;
+`
 
 const headerContentAnimation = keyframes`
 from {opacity: 0; transform: translateY(20px);}
 to {opacity: 1; transform: translate(0)}
-`;
+`
 
 const StyledHeader = styled.header`
   min-height: 85vh;
@@ -32,7 +32,7 @@ const StyledHeader = styled.header`
   flex-direction: column;
   align-items: center;
   justify-content: space-between;
-`;
+`
 
 const HeaderContainer = styled.div`
   display: flex;
@@ -44,7 +44,7 @@ const HeaderContainer = styled.div`
   animation-delay: 1.3s;
   opacity: 0;
   animation-fill-mode: forwards;
-`;
+`
 
 const HeaderImage = styled.div`
   width: 180px;
@@ -52,27 +52,27 @@ const HeaderImage = styled.div`
   background-image: url(${ali});
   background-repeat: no-repeat;
   background-position: center;
-  background-size: 120%;
+  background-size: 92%;
   border-radius: 50%;
   border: 5px solid #888;
-`;
+`
 
 const HeaderTextName = styled.h1`
-  font-family: "Oswald", sans-serif;
+  font-family: 'Oswald', sans-serif;
   font-size: 30px;
   font-weight: 500;
   letter-spacing: 0px;
   line-height: normal;
   margin-top: 20px;
-`;
+`
 
 const AnimatedTextContainer = styled.h2`
   margin-top: 8px;
-  font-family: "Rambla", sans-serif;
+  font-family: 'Rambla', sans-serif;
   font-size: 25px;
   display: flex;
   justify-content: center;
-`;
+`
 
 const DownArow = styled.div`
   svg {
@@ -88,7 +88,7 @@ const DownArow = styled.div`
       color: rgb(136, 136, 136);
     }
   }
-`;
+`
 export {
   StyledHeader,
   HeaderImage,
@@ -96,4 +96,4 @@ export {
   HeaderTextName,
   AnimatedTextContainer,
   DownArow,
-};
+}
